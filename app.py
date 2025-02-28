@@ -30,4 +30,8 @@ def podcasters():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # For local development
+    app.run(debug=True, host='0.0.0.0', port=8000)
+else:
+    # For production on Render
+    app.run(host='0.0.0.0', port=8000)
