@@ -29,6 +29,22 @@ def streamers():
 def podcasters():
     return render_template('index.html')
 
+@app.route('/music')
+def music():
+    return render_template('index.html')
+
+@app.route('/families')
+def families():
+    return render_template('index.html')
+
+@app.route('/political')
+def political():
+    return render_template('index.html')
+
+@app.route('/viral')
+def viral():
+    return render_template('index.html')
+
 if __name__ == '__main__':
     # For local development
     app.run(debug=True, host='0.0.0.0', port=8000)
