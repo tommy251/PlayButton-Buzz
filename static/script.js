@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const streams = data.items || [];
 
             if (streams.length > 0) {
-                let streamHtml = '<h3>IShowSpeed’s Latest Stream Highlights</h3><ul class="stream-list">';
+                let streamHtml = '<h3 class="section-title">IShowSpeed’s Latest Stream Highlights</h3><ul class="stream-list">';
                 streams.forEach(stream => {
                     const title = stream.snippet.title;
                     const videoId = stream.id.videoId;
                     const thumbnail = stream.snippet.thumbnails.medium.url;
                     streamHtml += `
                         <li class="stream-item">
-                            <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">
+                            <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" class="stream-link">
                                 <img src="${thumbnail}" alt="${title}" class="stream-thumbnail">
                                 <span class="stream-title">${title}</span>
                             </a>
@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 streamHtml += '</ul>';
                 streamersSection.innerHTML = streamHtml;
             } else {
-                streamersSection.innerHTML = '<p>No live streams available right now—check back soon!</p>';
+                streamersSection.innerHTML = '<p class="no-streams">No live streams available right now—check back soon!</p>';
             }
         } catch (error) {
             console.error('Error fetching streams:', error);
-            streamersSection.innerHTML = '<p>Oops! Couldn’t load the latest streams—try again later or visit <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank">IShowSpeed’s streams</a>.</p>';
+            streamersSection.innerHTML = '<p class="no-streams">Oops! Couldn’t load the latest streams—try again later or visit <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank" class="stream-link">IShowSpeed’s streams</a>.</p>';
         }
     }
 
