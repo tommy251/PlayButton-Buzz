@@ -1,7 +1,7 @@
 body {
-    font-family: 'Inter', sans-serif; /* Matches Rise Science’s font */
+    font-family: 'Inter', sans-serif; /* Matches Rise Science’s font, minimalist style */
     background-color: #000000; /* Black background */
-    color: #FFFFFF; /* White text for readability */
+    color: #FFFFFF; /* White text for readability and contrast */
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -37,12 +37,13 @@ body {
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500; /* Medium weight for clarity */
-    transition: color 0.3s ease; /* Smooth hover transition */
+    transition: color 0.3s ease; /* Smooth hover/click transition */
 }
 
 .main-nav ul li a:hover,
-.main-nav ul li a.active {
-    color: #F48C06; /* Orange for hover and active links, matching Rise Science */
+.main-nav ul li a.active,
+.main-nav ul li a:focus {
+    color: #FF4040; /* Light red for hover, active, and focus states */
     text-decoration: underline;
 }
 
@@ -59,6 +60,7 @@ body {
     color: #FFFFFF; /* White text */
     border-radius: 8px;
     margin-bottom: 20px;
+    border: 2px solid #FFFFFF; /* White border for emphasis */
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
@@ -82,6 +84,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
     color: #FFFFFF; /* White text */
+    border: 2px solid #FFFFFF; /* White border for emphasis */
 }
 
 .blog-post h2 {
@@ -96,6 +99,7 @@ body {
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
+    border: 2px solid #FFFFFF; /* White border for images */
 }
 
 .blog-post p {
@@ -106,15 +110,17 @@ body {
 
 .blog-post a,
 .read-more {
-    color: #F48C06; /* Orange for links, matching Rise Science buttons */
+    color: #FFFFFF; /* White for links initially */
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth hover/click transition */
 }
 
 .blog-post a:hover,
-.read-more:hover {
-    color: #D66B00; /* Darker orange on hover */
+.read-more:hover,
+.blog-post a:focus,
+.read-more:focus {
+    color: #FF4040; /* Light red for hover and focus states */
     text-decoration: underline;
 }
 
@@ -133,12 +139,14 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
     color: #FFFFFF; /* White text */
+    border: 2px solid #FFFFFF; /* White border for emphasis */
 }
 
 .stream-thumbnail {
     width: 100%;
     height: auto;
     border-radius: 8px 8px 0 0;
+    border-bottom: 2px solid #FFFFFF; /* White border for thumbnails */
 }
 
 .stream-title {
@@ -150,12 +158,13 @@ body {
 }
 
 .stream-title a {
-    color: #F48C06; /* Orange for links */
+    color: #FFFFFF; /* White for links initially */
     text-decoration: none;
 }
 
-.stream-title a:hover {
-    color: #D66B00; /* Darker orange on hover */
+.stream-title a:hover,
+.stream-title a:focus {
+    color: #FF4040; /* Light red for hover and focus states */
     text-decoration: underline;
 }
 
@@ -223,12 +232,13 @@ body {
 }
 
 .footer-links a {
-    color: #F48C06; /* Orange for links */
+    color: #FFFFFF; /* White for links initially */
     text-decoration: none;
     margin: 0 10px;
 }
 
-.footer-links a:hover {
-    color: #D66B00; /* Darker orange on hover */
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #FF4040; /* Light red for hover and focus states */
     text-decoration: underline;
 }
