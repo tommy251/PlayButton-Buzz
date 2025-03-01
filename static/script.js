@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const streams = data.items || [];
 
             if (streams.length > 0) {
-                let streamHtml = '<h3 class="section-title">IShowSpeed’s Latest Stream Highlights</h3><ul class="stream-list">';
+                let streamHtml = '<h2 class="section-title">IShowSpeed’s Latest Stream Highlights</h2><ul class="stream-list">';
                 streams.forEach(stream => {
                     const title = stream.snippet.title;
                     const videoId = stream.id.videoId;
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     streamHtml += `
                         <li class="stream-item">
                             <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" class="stream-link">
-                                <img src="${thumbnail}" alt="${title}" class="stream-thumbnail">
+                                <img src="${thumbnail}" alt="${title}" class="post-image">
                                 <span class="stream-title">${title}</span>
                             </a>
                         </li>`;
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 streamHtml += '</ul>';
                 streamersSection.innerHTML = streamHtml;
             } else {
-                streamersSection.innerHTML = '<p class="no-streams">No live streams available right now—check back soon!</p>';
+                streamersSection.innerHTML = '<p class="no-streams">No live streams available right now—check back soon.</p>';
             }
         } catch (error) {
             console.error('Error fetching streams:', error);
