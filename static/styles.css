@@ -1,17 +1,17 @@
 body {
     font-family: 'Inter', sans-serif; /* Matches Rise Science’s font */
-    background-color: #FFFFFF; /* White background */
-    color: #000000; /* Black text for readability */
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text for readability */
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 .site-header {
-    background-color: #FFFFFF; /* White background like Rise Science */
+    background-color: #000000; /* Black background like the body */
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtle white shadow for contrast */
 }
 
 .logo-img {
@@ -33,7 +33,7 @@ body {
 }
 
 .main-nav ul li a {
-    color: #000000; /* Black for links */
+    color: #FFFFFF; /* White for links on black background */
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500; /* Medium weight for clarity */
@@ -53,18 +53,18 @@ body {
 }
 
 .hero {
-    background-color: #F5F5F5; /* Light gray background like Rise Science cards */
+    background-color: #1A1A1A; /* Dark gray for subtle contrast on black */
     padding: 40px 20px;
     text-align: center;
-    color: #000000; /* Black text */
+    color: #FFFFFF; /* White text */
     border-radius: 8px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
 .hero-title {
     font-size: 3em;
-    color: #000000; /* Black for headlines */
+    color: #FFFFFF; /* White for headlines */
     margin-bottom: 20px;
     font-weight: 700; /* Bold for emphasis */
 }
@@ -77,15 +77,15 @@ body {
 }
 
 .blog-post {
-    background-color: #FFFFFF; /* White background for posts */
+    background-color: #1A1A1A; /* Dark gray background for posts on black */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    color: #000000; /* Black text */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+    color: #FFFFFF; /* White text */
 }
 
 .blog-post h2 {
-    color: #000000; /* Black for headlines */
+    color: #FFFFFF; /* White for headlines */
     font-size: 2em;
     margin-bottom: 15px;
     font-weight: 700; /* Bold for emphasis */
@@ -101,7 +101,7 @@ body {
 .blog-post p {
     font-size: 1.1em;
     line-height: 1.6;
-    color: #000000; /* Black text */
+    color: #FFFFFF; /* White text */
 }
 
 .blog-post a,
@@ -128,11 +128,11 @@ body {
 }
 
 .stream-item {
-    background-color: #FFFFFF; /* White background for streams */
+    background-color: #1A1A1A; /* Dark gray background for streams on black */
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    color: #000000; /* Black text */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+    color: #FFFFFF; /* White text */
 }
 
 .stream-thumbnail {
@@ -146,7 +146,7 @@ body {
     padding: 10px;
     font-size: 1em;
     text-align: center;
-    color: #000000; /* Black text */
+    color: #FFFFFF; /* White text */
 }
 
 .stream-title a {
@@ -210,12 +210,12 @@ body {
 }
 
 .site-footer {
-    background-color: #F5F5F5; /* Light gray like Rise Science footer */
+    background-color: #1A1A1A; /* Dark gray for footer on black */
     text-align: center;
     padding: 20px;
-    color: #000000; /* Black text */
+    color: #FFFFFF; /* White text */
     margin-top: 20px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
 .footer-links {
