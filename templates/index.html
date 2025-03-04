@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayButtonBuzz - YouTube Celebrity News</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='buzz.png') }}"> <!-- Updated favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='playbuttonbuzz_logo_transparent.png') }}"> <!-- Updated favicon -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> <!-- Using Inter font, minimalist style -->
 </head>
 <body>
     <header class="site-header">
         <div class="logo">
-            <img src="{{ url_for('static', filename='buzz.png') }}" alt="PlayButtonBuzz Logo" class="logo-img">
+            <img src="{{ url_for('static', filename='playbuttonbuzz_logo_transparent.png') }}" alt="PlayButtonBuzz Logo" class="logo-img">
         </div>
         <nav class="main-nav">
             <ul>
@@ -99,7 +99,7 @@
                     <p>Watch <a href="https://www.youtube.com/@AdinRoss/streams" target="_blank">YouTube</a> for action!</p>
                     <a href="https://www.youtube.com/@AdinRoss/streams" target="_blank" class="read-more">Read More</a>
                 </article>
-                article class="blog-post">
+                <article class="blog-post">
                     <h2>Deebo Samuel’s YouTube Stream Reaction to Commanders Trade Goes Viral</h2>
                     <img src="{{ url_for('static', filename='deb.jpg') }}" alt="Roman Atwood" class="post-image">
                     <p>Following his trade from the San Francisco 49ers to the Washington Commanders on March 3, 2025, Deebo Samuel shared a heartfelt live reaction on his YouTube channel, thanking fans and discussing his future. The stream, featuring emotional moments and fan Q&A, has garnered over 2 million views in hours, trending on X with mixed reactions—some praising his authenticity, others questioning the 49ers’ strategy. The video includes his physical condition debate (overweight claims) and strategic shifts for both teams. <a href="https://www.youtube.com/watch?v=-fiRR_r95XA" target="_blank">YouTube</a>!</p>
@@ -164,6 +164,12 @@
                     <p>Billie Eilish’s February 28, 2025, album drop hit 20 million YouTube views, trending on X. Teens obsess, adults praise—check <a href="https://www.youtube.com/@BillieEilish/videos" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@BillieEilish/videos" target="_blank" class="read-more">Read More</a>
                 </article>
+                <article class="blog-post">
+                    <h2>Portable’s YouTube Music Pivot—From Trouble to Hits in 2025</h2>
+                    <img src="{{ url_for('static', filename='portable.jpg') }}" alt="Portable" class="post-image">
+                    <p>Portable announced on March 3, 2025, via a YouTube live stream he’s shifting to music production, aiming for a new album in April 2025. His channel gained 1.5 million views, with X debating if it’s genuine or a stunt—teens love his energy, adults question sincerity, and older fans recall drama. PlayButtonBuzz says it’s a music comeback or strategy!</p>
+                    <a href="https://www.youtube.com/@portable/videos" target="_blank" class="read-more">Read More</a>
+                </article>
             </section>
 
         {% elif request.endpoint == 'families' %}
@@ -187,6 +193,13 @@
                     <p>Roman Atwood’s February 28, 2025, prank vlog hit 5 million YouTube views, trending on X. Teens laugh, adults cheer—watch <a href="https://www.youtube.com/@RomanAtwood/videos" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@RomanAtwood/videos" target="_blank" class="read-more">Read More</a>
                 </article>
+                <article class="blog-post">
+                    <h2>Nollywood Actress Funke Akindele’s Family Vlog Drama on YouTube</h2>
+                    <img src="{{ url_for('static', filename='fuk.jpg') }}" alt="Funke Akindele" class="post-image">
+                    <p>Funke Akindele’s March 3, 2025, YouTube vlog on feminism and family dynamics hit 2 million views, sparking X buzz. Teens find her relatable, adults analyze the shift, and older fans tie it to values—PlayButtonBuzz says it’s drama or a pivot!</p>
+                    <a href="https://www.youtube.com/@funkeakindele/videos" target="_blank" class="read-more">Read More</a>
+                </article>
+            </section>
 
         {% elif request.endpoint == 'political' %}
             <section class="content-section">
@@ -208,6 +221,12 @@
                     <img src="{{ url_for('static', filename='destiny.jpg') }}" alt="Destiny" class="post-image">
                     <p>Destiny’s February 28, 2025, Trump rally stream hit 3 million YouTube views, trending on X. Teens love sass, adults debate—watch <a href="https://www.youtube.com/@destiny/videos" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@destiny/videos" target="_blank" class="read-more">Read More</a>
+                </article>
+                <article class="blog-post">
+                    <h2>Nigerian Police Force’s YouTube Denial Sparks Political Backlash</h2>
+                    <img src="{{ url_for('static', filename='NP.jpg') }}" alt="Nigerian Police" class="post-image">
+                    <p>The Nigeria Police Force’s March 3, 2025, YouTube video denying Lugbe terrorist rumors hit 300,000 views, fueling YouTube political debates with 1 million views. Podcasters argue it hides flaws, with X buzzing—teens question transparency, adults analyze control. PlayButtonBuzz says it’s a firestorm—truth or cover-up!</p>
+                    <a href="https://www.youtube.com/@nigeriapoliceforce/videos" target="_blank" class="read-more">Read More</a>
                 </article>
             </section>
 
@@ -238,6 +257,18 @@
                     <p>The Sidemen’s February 28, 2025, charity match hit 12 million YouTube views, trending on X. Teens cheer, adults love the cause—watch <a href="https://www.youtube.com/@Sidemen/videos" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@Sidemen/videos" target="_blank" class="read-more">Read More</a>
                 </article>
+                <article class="blog-post">
+                    <h2>Pastor Jerry Eze’s NSPPD YouTube Surge—Spiritual Hunger Goes Viral</h2>
+                    <img src="{{ url_for('static', filename='jerry.jpg') }}" alt="Pastor Jerry Eze" class="post-image">
+                    <p>Pastor Jerry Eze’s NSPPD ministry hit a milestone on March 3, 2025, with YouTube live prayers surpassing 10 million views in a week, trending on X as “2025’s spiritual wave.” Streams feature testimonies, but X debates faith vs. hype—teens join for energy, adults seek solace. PlayButtonBuzz calls it a phenomenon—revival or spectacle!</p>
+                    <a href="https://www.youtube.com/@pastorjerryeze/videos" target="_blank" class="read-more">Read More</a>
+                </article>
+                <article class="blog-post">
+                    <h2>Kanye West’s N*d£ YouTube Post Ignites Viral Controversy</h2>
+                    <img src="{{ url_for('static', filename='ye.jpg') }}" alt="Kanye West" class="post-image">
+                    <p>Kanye West’s March 3, 2025, YouTube post featuring a provocative Bianca Censori image for his movie premiere hit 5 million views, trending on X as “2025’s boldest move.” Teens meme it, adults debate ethics—PlayButtonBuzz says it’s chaos or shock!</p>
+                    <a href="https://www.youtube.com/@kanyewest/videos" target="_blank" class="read-more">Read More</a>
+                </article>
             </section>
         {% endif %}
     </main>
@@ -251,4 +282,4 @@
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
-</html>s
+</html>
