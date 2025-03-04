@@ -34,25 +34,25 @@
                     <article class="blog-post">
                         <h2>Streamers: IShowSpeed’s Super Bowl Stunt Goes Viral</h2>
                         <img src="{{ url_for('static', filename='sped1.jpg') }}" alt="IShowSpeed" class="post-image">
-                        <p>IShowSpeed crashed the Super Bowl LIX sidelines on February 9, 2025, pulling a wild stunt that’s trending with over 10 million views on YouTube and X. Teens are obsessed, adults are stunned, and older fans can’t look away!</p>
+                        <p>IShowSpeed crashed the Super Bowl LIX sidelines on February 9, 2025, pulling a wild stunt trending with over 10 million views on YouTube and X. Teens are obsessed, adults are stunned, and older fans can’t look away!</p>
                         <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank" class="read-more">Read More</a>
                     </article>
                     <article class="blog-post">
                         <h2>Families: The LaBrant Fam’s New Baby Drama</h2>
                         <img src="{{ url_for('static', filename='lab.jpg') }}" alt="LaBrant" class="post-image">
-                        <p>The LaBrant Family’s February 2025 vlog revealed a surprise baby announcement, sparking gossip on YouTube and X. Fans are buzzing about their growing brood—check it out!</p>
+                        <p>The LaBrant Family’s February 2025 vlog revealed a surprise baby announcement, sparking gossip on YouTube and X. Fans are buzzing—check it out!</p>
                         <a href="https://www.youtube.com/@TheLaBrantFam/videos" target="_blank" class="read-more">Read More</a>
                     </article>
                     <article class="blog-post">
                         <h2>Political: YouTube Pundits Debate Mayor Adams’ Case</h2>
                         <img src="{{ url_for('static', filename='adam.jpg') }}" alt="Adams" class="post-image">
-                        <p>YouTube political stars are debating New York Mayor Eric Adams’ corruption case dismissal motion from February 26, 2025, with millions of views on YouTube and heated X discussions. Teens pick sides, adults analyze, and older viewers question the leaks.</p>
+                        <p>YouTube political stars debated Mayor Eric Adams’ corruption case from February 26, 2025, with millions of views on YouTube and X. Teens pick sides, adults analyze, and older viewers question the leaks.</p>
                         <a href="https://www.youtube.com/results?search_query=mayor+adams+2025" target="_blank" class="read-more">Read More</a>
                     </article>
                     <article class="blog-post">
                         <h2>Viral: Kai Cenat’s Batman Madness Hits 10M Views</h2>
                         <img src="{{ url_for('static', filename='kai.jpg') }}" alt="Kai Cenat Batman" class="post-image">
-                        <p>Kai Cenat and Lil Rodney’s February 2025 Batman skit on Twitch hit 10 million YouTube views in days, trending on X. Teens meme it, adults laugh, and older fans are baffled—pure viral gold!</p>
+                        <p>Kai Cenat’s February 2025 Batman skit on Twitch hit 10 million YouTube views, trending on X. Teens meme it, adults laugh, and older fans are baffled—pure viral gold!</p>
                         <a href="https://youtube.com/shorts/jYQ3g4j1pqQ?si=4XYQDjDLzgBcctpa" target="_blank" class="read-more">Read More</a>
                     </article>
                 </div>
@@ -64,32 +64,32 @@
                 <article class="blog-post">
                     <h2>IShowSpeed’s Wildest Stream Moments of 2025</h2>
                     <img src="{{ url_for('static', filename='speed0.jpg') }}" alt="IShowSpeed at 2025 Royal Rumble" class="post-image">
-                    <p>IShowSpeed’s Super Bowl LIX stunt on February 9, 2025, trends on YouTube with 10 million views, cementing his chaotic reign. His streams hit 30 million subscribers—teens rave, adults debate, and older fans watch in awe!</p>
+                    <p>IShowSpeed’s Super Bowl LIX stunt on February 9, 2025, trends on YouTube with 10 million views. His streams hit 30 million subscribers—teens rave, adults debate, and older fans watch in awe!</p>
                     <p><strong>Latest Highlights:</strong></p>
                     <ul class="stream-list">
                         {% for stream in streams %}
                             <li class="stream-item"><a href="https://www.youtube.com/watch?v={{ stream.video_id }}" target="_blank">{{ stream.title }}</a></li>
                         {% endfor %}
                         {% if not streams %}
-                            <li>No live streams available right now—check back soon.</li>
+                            <li>No live streams available—check back soon.</li>
                         {% endif %}
                     </ul>
                     <img src="{{ url_for('static', filename='speed12.jpg') }}" alt="IShowSpeed at Match for Hope 2025" class="post-image">
-                    <p>His X buzz on influence splits opinions—brilliant or reckless? Check <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank">YouTube</a> for more!</p>
+                    <p>His X buzz splits opinions—brilliant or reckless? Check <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank" class="read-more">Read More</a>
                 </article>
                 <article class="blog-post">
                     <h2>Kai Cenat’s Batman Bonanza</h2>
                     <img src="{{ url_for('static', filename='kaiv.png') }}" alt="Kai Cenat and Lil Rodney as Batman on Stream" class="post-image">
-                    <p>Kai Cenat’s February 2025 Batman skit with Lil Rodney hit 10 million YouTube views, trending on X as “2025’s funniest.” His Twitch chaos keeps fans hooked—teens meme, adults laugh, and older fans are amazed!</p>
-                    <p>Check <a href="https://youtube.com/shorts/jYQ3g4j1pqQ?si=4XYQDjDLzgBcctpa" target="_blank">YouTube</a> for the skit and more!</p>
+                    <p>Kai Cenat’s February 2025 Batman skit hit 10 million YouTube views, trending on X as “2025’s funniest.” His Twitch chaos hooks fans—teens meme, adults laugh, and older fans are amazed!</p>
+                    <p>Check <a href="https://youtube.com/shorts/jYQ3g4j1pqQ?si=4XYQDjDLzgBcctpa" target="_blank">YouTube</a> for more!</p>
                     <a href="https://www.youtube.com/@KaiCenat/videos" target="_blank" class="read-more">Read More</a>
                 </article>
                 <article class="blog-post">
                     <h2>Adin Ross Drops $500K Casino Stream</h2>
                     <img src="{{ url_for('static', filename='adin.jpg') }}" alt="Adin Ross Casino Stream" class="post-image">
-                    <p>Adin Ross’s February 28, 2025, $500K casino stream on YouTube hit 8 million views, sparking X debates on gambling ethics. Teens love the stakes, adults question influence, and older fans are stunned—neon chaos!</p>
-                    <p>Watch <a href="https://www.youtube.com/@AdinRoss/streams" target="_blank">YouTube</a> for the action!</p>
+                    <p>Adin Ross’s February 28, 2025, $500K casino stream hit 8 million YouTube views, sparking X debates on gambling. Teens love the stakes, adults question influence, and older fans are stunned!</p>
+                    <p>Watch <a href="https://www.youtube.com/@AdinRoss/streams" target="_blank">YouTube</a> for action!</p>
                     <a href="https://www.youtube.com/@AdinRoss/streams" target="_blank" class="read-more">Read More</a>
                 </article>
             </section>
@@ -100,19 +100,19 @@
                 <article class="blog-post">
                     <h2>Joe Rogan’s AI and Brain Telepathy Chat</h2>
                     <img src="{{ url_for('static', filename='joe.jpg') }}" alt="Joe Rogan" class="post-image">
-                    <p>Joe Rogan’s 2025 episode on AI and brain telepathy hit 3 million YouTube views, exploring Neuralink and telepathic UFC fights. Teens geek out, adults debate ethics, and older fans wonder—check <a href="https://www.youtube.com/@joerogan/videos" target="_blank">YouTube</a>!</p>
+                    <p>Joe Rogan’s 2025 AI and brain telepathy episode hit 3 million YouTube views, exploring Neuralink. Teens geek out, adults debate—check <a href="https://www.youtube.com/@joerogan/videos" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@joerogan/videos" target="_blank" class="read-more">Read More</a>
                 </article>
                 <article class="blog-post">
                     <h2>PBD Podcast’s Trump and Bolsonaro Fireworks</h2>
                     <img src="{{ url_for('static', filename='pbd.jpg') }}" alt="PBD Podcast" class="post-image">
-                    <p>PBD Podcast’s 2025 episode on Trump’s win without Musk and Bolsonaro’s comeback hit 1.5 million YouTube views, sparking X buzz. Teens love drama, adults analyze—watch <a href="https://www.youtube.com/@PBDPodcast/videos" target="_blank">YouTube</a>!</p>
+                    <p>PBD Podcast’s 2025 episode on Trump’s win and Bolsonaro’s comeback hit 1.5 million YouTube views, sparking X buzz. Teens love drama, adults analyze—watch <a href="https://www.youtube.com/@PBDPodcast/videos" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@PBDPodcast/videos" target="_blank" class="read-more">Read More</a>
                 </article>
                 <article class="blog-post">
                     <h2>Lex Fridman’s Quantum AI Breakthrough</h2>
                     <img src="{{ url_for('static', filename='lex.jpg') }}" alt="Lex Fridman" class="post-image">
-                    <p>Lex Fridman’s February 28, 2025, AI quantum computing talk hit 2 million YouTube views, trending on X. Teens geek out, adults theorize—check <a href="https://www.youtube.com/@lexfridman/videos" target="_blank">YouTube</a>!</p>
+                    <p>Lex Fridman’s February 28, 2025, AI quantum talk hit 2 million YouTube views, trending on X. Teens geek out, adults theorize—check <a href="https://www.youtube.com/@lexfridman/videos" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@lexfridman/videos" target="_blank" class="read-more">Read More</a>
                 </article>
             </section>
@@ -123,13 +123,13 @@
                 <article class="blog-post">
                     <h2>Afrobeats Taking Over Worldwide</h2>
                     <img src="{{ url_for('static', filename='max.jpg') }}" alt="Afrobeats Celebs" class="post-image">
-                    <p>Afrobeats stars Tems, Ayra Starr, and Rema dominate 2025 YouTube playlists, trending on X as the “decade’s soundtrack.” Teens vibe, adults stream—watch <a href="https://www.youtube.com/results?search_query=afrobeats+2025" target="_blank">YouTube</a>!</p>
+                    <p>Afrobeats stars Tems, Ayra Starr, and Rema dominate 2025 YouTube, trending on X. Teens vibe, adults stream—watch <a href="https://www.youtube.com/results?search_query=afrobeats+2025" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/results?search_query=afrobeats+2025" target="_blank" class="read-more">Read More</a>
                 </article>
                 <article class="blog-post">
                     <h2>Kendrick Lamar vs. Drake Super Bowl Beef</h2>
                     <img src="{{ url_for('static', filename='dvk.jpg') }}" alt="Kendrick Lamar and Drake" class="post-image">
-                    <p>Kendrick Lamar’s Super Bowl LIX halftime on February 9, 2025, and Grammy wins for “Not Like Us” fuel his beef with Drake, trending on YouTube and X. Teens hype, adults dissect—watch <a href="https://www.youtube.com/@kendricklamar/videos" target="_blank">YouTube</a>!</p>
+                    <p>Kendrick Lamar’s Super Bowl LIX halftime and Grammy wins fuel his beef with Drake, trending on YouTube and X. Teens hype, adults dissect—watch <a href="https://www.youtube.com/@kendricklamar/videos" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@kendricklamar/videos" target="_blank" class="read-more">Read More</a>
                 </article>
                 <article class="blog-post">
@@ -146,7 +146,7 @@
                 <article class="blog-post">
                     <h2>The LaBrant Fam’s New Baby Drama</h2>
                     <img src="{{ url_for('static', filename='lab.jpg') }}" alt="LaBrant" class="post-image">
-                    <p>The LaBrant Family’s February 2025 baby announcement vlog hit 12 million YouTube views, sparking X gossip. Teens swoon, adults debate—watch <a href="https://www.youtube.com/@TheLaBrantFam/videos" target="_blank">YouTube</a>!</p>
+                    <p>The LaBrant Family’s February 2025 baby vlog hit 12 million YouTube views, sparking X gossip. Teens swoon, adults debate—watch <a href="https://www.youtube.com/@TheLaBrantFam/videos" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@TheLaBrantFam/videos" target="_blank" class="read-more">Read More</a>
                 </article>
                 <article class="blog-post">
@@ -158,7 +158,7 @@
                 <article class="blog-post">
                     <h2>Roman Atwood’s Comeback Vlog</h2>
                     <img src="{{ url_for('static', filename='roman.jpg') }}" alt="Roman Atwood" class="post-image">
-                    <p>Roman Atwood’s February 28, 2025, family prank vlog hit 5 million YouTube views, trending on X. Teens laugh, adults cheer—watch <a href="https://www.youtube.com/@RomanAtwood/videos" target="_blank">YouTube</a>!</p>
+                    <p>Roman Atwood’s February 28, 2025, prank vlog hit 5 million YouTube views, trending on X. Teens laugh, adults cheer—watch <a href="https://www.youtube.com/@RomanAtwood/videos" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/@RomanAtwood/videos" target="_blank" class="read-more">Read More</a>
                 </article>
             </section>
@@ -169,7 +169,7 @@
                 <article class="blog-post">
                     <h2>YouTube Pundits on Mayor Adams’ Case</h2>
                     <img src="{{ url_for('static', filename='adam.jpg') }}" alt="Mayor Adams" class="post-image">
-                    <p>YouTube stars debated Mayor Eric Adams’ corruption case from February 26, 2025, hitting millions of views on YouTube, with X buzzing. Teens pick sides, adults analyze—watch <a href="https://www.youtube.com/results?search_query=mayor+adams+2025" target="_blank">YouTube</a>!</p>
+                    <p>YouTube stars debated Mayor Eric Adams’ case from February 26, 2025, with millions of views on YouTube and X. Teens pick sides, adults analyze—watch <a href="https://www.youtube.com/results?search_query=mayor+adams+2025" target="_blank">YouTube</a>!</p>
                     <a href="https://www.youtube.com/results?search_query=mayor+adams+2025" target="_blank" class="read-more">Read More</a>
                 </article>
                 <article class="blog-post">
@@ -220,4 +220,4 @@
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
-</html>
+</html>s

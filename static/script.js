@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 streamHtml += '</ul>';
                 streamersSection.innerHTML = streamHtml;
             } else {
-                streamersSection.innerHTML = '<p class="no-streams">No live streams available right now—check back soon.</p>';
+                streamersSection.innerHTML = '<p class="no-streams">No live streams available—check back soon.</p>';
             }
         } catch (error) {
             console.error('Error fetching streams:', error);
-            streamersSection.innerHTML = '<p class="no-streams">Oops! Couldn’t load the latest streams—try again later or visit <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank" class="stream-link">IShowSpeed’s streams</a>.</p>';
+            streamersSection.innerHTML = '<p class="no-streams">Oops! Couldn’t load streams—try again or visit <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank" class="stream-link">IShowSpeed’s streams</a>.</p>';
         }
     }
 
