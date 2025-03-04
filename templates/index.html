@@ -31,244 +31,104 @@
             <section class="hero">
                 <h1 class="hero-title">News Highlights—YouTube’s Hottest Moments</h1>
                 <div class="blog-grid">
-                    <article class="blog-post">
-                        <h2>Streamers: IShowSpeed’s Super Bowl Stunt Goes Viral</h2>
-                        <img src="{{ url_for('static', filename='sped1.jpg') }}" alt="IShowSpeed" class="post-image">
-                        <p>IShowSpeed crashed the Super Bowl LIX sidelines on February 9, 2025, pulling a wild stunt trending with over 10 million views on YouTube and X. Teens are obsessed, adults are stunned, and older fans can’t look away!</p>
-                        <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank" class="read-more">Read More</a>
-                    </article>
-                    <article class="blog-post">
-                        <h2>Families: The LaBrant Fam’s New Baby Drama</h2>
-                        <img src="{{ url_for('static', filename='lab.jpg') }}" alt="LaBrant" class="post-image">
-                        <p>The LaBrant Family’s February 2025 vlog revealed a surprise baby announcement, sparking gossip on YouTube and X. Fans are buzzing—check it out!</p>
-                        <a href="https://www.youtube.com/@TheLaBrantFam/videos" target="_blank" class="read-more">Read More</a>
-                    </article>
-                    <article class="blog-post">
-                        <h2>Political: YouTube Pundits Debate Mayor Adams’ Case</h2>
-                        <img src="{{ url_for('static', filename='adam.jpg') }}" alt="Adams" class="post-image">
-                        <p>YouTube political stars debated Mayor Eric Adams’ corruption case from February 26, 2025, with millions of views on YouTube and X. Teens pick sides, adults analyze, and older viewers question the leaks.</p>
-                        <a href="https://www.youtube.com/results?search_query=mayor+adams+2025" target="_blank" class="read-more">Read More</a>
-                    </article>
-                    <article class="blog-post">
-                        <h2>Viral: Kai Cenat’s Batman Madness Hits 10M Views</h2>
-                        <img src="{{ url_for('static', filename='kai.jpg') }}" alt="Kai Cenat Batman" class="post-image">
-                        <p>Kai Cenat’s February 2025 Batman skit on Twitch hit 10 million YouTube views, trending on X. Teens meme it, adults laugh, and older fans are baffled—pure viral gold!</p>
-                        <a href="https://youtube.com/shorts/jYQ3g4j1pqQ?si=4XYQDjDLzgBcctpa" target="_blank" class="read-more">Read More</a>
-                    </article>
+                    {% for article in articles.home %}
+                        <article class="blog-post">
+                            <h2>{{ article.title }}</h2>
+                            <img src="{{ url_for('static', filename=article.image) }}" alt="{{ article.title }}" class="post-image">
+                            <p>{{ article.description }} Added on {{ article.added_time }}!</p>
+                            <a href="{{ article.link }}" target="_blank" class="read-more">Read More</a>
+                        </article>
+                    {% endfor %}
                 </div>
             </section>
 
         {% elif request.endpoint == 'streamers' %}
             <section class="content-section">
                 <h1 class="section-title">Top YouTube Streamers—Live Chaos Unleashed</h1>
-                <article class="blog-post">
-                    <h2>IShowSpeed’s Wildest Stream Moments of 2025</h2>
-                    <img src="{{ url_for('static', filename='speed0.jpg') }}" alt="IShowSpeed at 2025 Royal Rumble" class="post-image">
-                    <p>IShowSpeed’s Super Bowl LIX stunt on February 9, 2025, trends on YouTube with 10 million views. His streams hit 30 million subscribers—teens rave, adults debate, and older fans watch in awe!</p>
-                    <p><strong>Latest Highlights:</strong></p>
-                    <ul class="stream-list">
-                        {% for stream in streams %}
-                            <li class="stream-item"><a href="https://www.youtube.com/watch?v={{ stream.video_id }}" target="_blank">{{ stream.title }}</a></li>
-                        {% endfor %}
-                        {% if not streams %}
-                            <li>No live streams available—check back soon.</li>
+                {% for article in articles.streamers %}
+                    <article class="blog-post">
+                        <h2>{{ article.title }}</h2>
+                        <img src="{{ url_for('static', filename=article.image) }}" alt="{{ article.title }}" class="post-image">
+                        <p>{{ article.description }} Added on {{ article.added_time }}!</p>
+                        {% if article.latest_highlights %}
+                            <p><strong>Latest Highlights:</strong></p>
+                            <ul class="stream-list">
+                                {% for stream in streams %}
+                                    <li class="stream-item"><a href="https://www.youtube.com/watch?v={{ stream.video_id }}" target="_blank">{{ stream.title }}</a></li>
+                                {% endfor %}
+                                {% if not streams %}
+                                    <li>No live streams available—check back soon.</li>
+                                {% endif %}
+                            </ul>
                         {% endif %}
-                    </ul>
-                    <img src="{{ url_for('static', filename='speed12.jpg') }}" alt="IShowSpeed at Match for Hope 2025" class="post-image">
-                    <p>His X buzz splits opinions—brilliant or reckless? Check <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@IShowSpeed/streams" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Quinn Mathews’ Minor League Move Inspires YouTube Sports Analysis</h2>
-                    <img src="{{ url_for('static', filename='Qun.jpg') }}" alt="Adin Ross Casino Stream" class="post-image">
-                    <p>The St. Louis Cardinals’ decision to reassign pitching prospect Quinn Mathews to minor league camp on March 2, 2025, has sparked YouTube sports channels to analyze his development, with over 800,000 views. Streams debate the timing and impact on his career, with X split between support for development and surprise at the early move. Channels like Baseball Buzz and MLB Insider live-streamed reactions, engaging fans.</p>
-                    <p>Watch <a href="https://www.youtube.com/watch?v=SyOCsqygoF4" target="_blank">YouTube</a> for action!</p>
-                    <a href="https://www.youtube.com/watch?v=SyOCsqygoF4" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Kai Cenat’s Batman Bonanza</h2>
-                    <img src="{{ url_for('static', filename='kaiv.png') }}" alt="Kai Cenat and Lil Rodney as Batman on Stream" class="post-image">
-                    <p>Kai Cenat’s February 2025 Batman skit hit 10 million YouTube views, trending on X as “2025’s funniest.” His Twitch chaos hooks fans—teens meme, adults laugh, and older fans are amazed!</p>
-                    <p>Check <a href="https://youtube.com/shorts/jYQ3g4j1pqQ?si=4XYQDjDLzgBcctpa" target="_blank">YouTube</a> for more!</p>
-                    <a href="https://www.youtube.com/@KaiCenat/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Adin Ross Drops $500K Casino Stream</h2>
-                    <img src="{{ url_for('static', filename='adin.jpg') }}" alt="Adin Ross Casino Stream" class="post-image">
-                    <p>Adin Ross’s February 28, 2025, $500K casino stream hit 8 million YouTube views, sparking X debates on gambling. Teens love the stakes, adults question influence, and older fans are stunned!</p>
-                    <p>Watch <a href="https://www.youtube.com/@AdinRoss/streams" target="_blank">YouTube</a> for action!</p>
-                    <a href="https://www.youtube.com/@AdinRoss/streams" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Deebo Samuel’s YouTube Stream Reaction to Commanders Trade Goes Viral</h2>
-                    <img src="{{ url_for('static', filename='deb.jpg') }}" alt="Roman Atwood" class="post-image">
-                    <p>Following his trade from the San Francisco 49ers to the Washington Commanders on March 3, 2025, Deebo Samuel shared a heartfelt live reaction on his YouTube channel, thanking fans and discussing his future. The stream, featuring emotional moments and fan Q&A, has garnered over 2 million views in hours, trending on X with mixed reactions—some praising his authenticity, others questioning the 49ers’ strategy. The video includes his physical condition debate (overweight claims) and strategic shifts for both teams. <a href="https://www.youtube.com/watch?v=-fiRR_r95XA" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/watch?v=-fiRR_r95XA" target="_blank" class="read-more">Read More</a>
-                </article>
+                        <a href="{{ article.link }}" target="_blank" class="read-more">Read More</a>
+                    </article>
+                {% endfor %}
             </section>
 
         {% elif request.endpoint == 'podcasters' %}
             <section class="content-section">
                 <h1 class="section-title">Top YouTube Podcasters</h1>
-                <article class="blog-post">
-                    <h2>Catholic Priest’s Prayer to Mary Sparks YouTube Theological Firestorm</h2>
-                    <img src="{{ url_for('static', filename='cat.jpeg') }}" alt="Catholic" class="post-image">
-                    <p>Father David Michael’s controversial March 3, 2025, statement on praying to Mary because Jesus might be too busy has ignited a YouTube debate, with religious channels and podcasters like Catholic Voices and Protestant Perspectives racking up 500,000 views. The discussion, trending on X, pits defenders of Marian intercession against critics calling it blasphemous, with live streams analyzing theological implications and community reactions.
-                        Content: Focuses on YouTube religious content creators and podcasters discussing a controversial religious topic, engaging diverse audiences. <a href="https://www.youtube.com/watch?v=ecnbdl6Lhnc" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/watch?v=ecnbdl6Lhnc" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Joe Rogan’s AI and Brain Telepathy Chat</h2>
-                    <img src="{{ url_for('static', filename='joe.jpg') }}" alt="Joe Rogan" class="post-image">
-                    <p>Joe Rogan’s 2025 AI and brain telepathy episode hit 3 million YouTube views, exploring Neuralink. Teens geek out, adults debate—check <a href="https://www.youtube.com/@joerogan/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@joerogan/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>PBD Podcast’s Trump and Bolsonaro Fireworks</h2>
-                    <img src="{{ url_for('static', filename='pbd.jpg') }}" alt="PBD Podcast" class="post-image">
-                    <p>PBD Podcast’s 2025 episode on Trump’s win and Bolsonaro’s comeback hit 1.5 million YouTube views, sparking X buzz. Teens love drama, adults analyze—watch <a href="https://www.youtube.com/@PBDPodcast/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@PBDPodcast/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Lex Fridman’s Quantum AI Breakthrough</h2>
-                    <img src="{{ url_for('static', filename='lex.jpg') }}" alt="Lex Fridman" class="post-image">
-                    <p>Lex Fridman’s February 28, 2025, AI quantum talk hit 2 million YouTube views, trending on X. Teens geek out, adults theorize—check <a href="https://www.youtube.com/@lexfridman/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@lexfridman/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Carmelo Hayes’ Eddie Guerrero Tribute Sparks YouTube Wrestling Debate</h2>
-                    <img src="{{ url_for('static', filename='cam.jpg') }}" alt="Lex Fridman" class="post-image">
-                    <p>Carmelo Hayes’ WWE SmackDown performance on February 28, 2025, honoring Eddie Guerrero with a signature move went viral on YouTube, drawing 1.5 million views. Fans and wrestling podcasters on YouTube debated Hayes’ strategic use of Guerrero’s “lie, cheat, and steal” style, with X split between praise for the tribute and criticism of its fairness in the US Title Tournament. The video showcases Hayes’ YouTube channel growth and fan engagement. <a href="https://www.youtube.com/watch?v=rZfdjc8CY_4" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/watch?v=rZfdjc8CY_4" target="_blank" class="read-more">Read More</a>
-                </article>
+                {% for article in articles.podcasters %}
+                    <article class="blog-post">
+                        <h2>{{ article.title }}</h2>
+                        <img src="{{ url_for('static', filename=article.image) }}" alt="{{ article.title }}" class="post-image">
+                        <p>{{ article.description }} Added on {{ article.added_time }}!</p>
+                        <a href="{{ article.link }}" target="_blank" class="read-more">Read More</a>
+                    </article>
+                {% endfor %}
             </section>
 
         {% elif request.endpoint == 'music' %}
             <section class="content-section">
                 <h1 class="section-title">Hot YouTube Music Celebs</h1>
-                <article class="blog-post">
-                    <h2>Afrobeats Taking Over Worldwide</h2>
-                    <img src="{{ url_for('static', filename='max.jpg') }}" alt="Afrobeats Celebs" class="post-image">
-                    <p>Afrobeats stars Tems, Ayra Starr, and Rema dominate 2025 YouTube, trending on X. Teens vibe, adults stream—watch <a href="https://www.youtube.com/results?search_query=afrobeats+2025" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/results?search_query=afrobeats+2025" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Kendrick Lamar vs. Drake Super Bowl Beef</h2>
-                    <img src="{{ url_for('static', filename='dvk.jpg') }}" alt="Kendrick Lamar and Drake" class="post-image">
-                    <p>Kendrick Lamar’s Super Bowl LIX halftime and Grammy wins fuel his beef with Drake, trending on YouTube and X. Teens hype, adults dissect—watch <a href="https://www.youtube.com/@kendricklamar/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@kendricklamar/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Billie Eilish’s Surprise Album Drop</h2>
-                    <img src="{{ url_for('static', filename='billie.jpg') }}" alt="Billie Eilish" class="post-image">
-                    <p>Billie Eilish’s February 28, 2025, album drop hit 20 million YouTube views, trending on X. Teens obsess, adults praise—check <a href="https://www.youtube.com/@BillieEilish/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@BillieEilish/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Portable’s YouTube Music Pivot—From Trouble to Hits in 2025</h2>
-                    <img src="{{ url_for('static', filename='pot.jpg') }}" alt="Portable" class="post-image">
-                    <p>Portable announced on March 3, 2025, via a YouTube live stream he’s shifting to music production, aiming for a new album in April 2025. His channel gained 1.5 million views, with X debating if it’s genuine or a stunt—teens love his energy, adults question sincerity, and older fans recall drama. PlayButtonBuzz says it’s a music comeback or strategy!</p>
-                    <a href="https://www.youtube.com/@portable/videos" target="_blank" class="read-more">Read More</a>
-                </article>
+                {% for article in articles.music %}
+                    <article class="blog-post">
+                        <h2>{{ article.title }}</h2>
+                        <img src="{{ url_for('static', filename=article.image) }}" alt="{{ article.title }}" class="post-image">
+                        <p>{{ article.description }} Added on {{ article.added_time }}!</p>
+                        <a href="{{ article.link }}" target="_blank" class="read-more">Read More</a>
+                    </article>
+                {% endfor %}
             </section>
 
         {% elif request.endpoint == 'families' %}
             <section class="content-section">
                 <h1 class="section-title">YouTube Family Celebs</h1>
-                <article class="blog-post">
-                    <h2>The LaBrant Fam’s New Baby Drama</h2>
-                    <img src="{{ url_for('static', filename='lab.jpg') }}" alt="LaBrant" class="post-image">
-                    <p>The LaBrant Family’s February 2025 baby vlog hit 12 million YouTube views, sparking X gossip. Teens swoon, adults debate—watch <a href="https://www.youtube.com/@TheLaBrantFam/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@TheLaBrantFam/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>The ACE Family’s Renovation Rumble</h2>
-                    <img src="{{ url_for('static', filename='fued.jpg') }}" alt="ACE Family" class="post-image">
-                    <p>The ACE Family’s February 2025 renovation feud hit 10 million YouTube views, trending on X. Teens love chaos, adults analyze—check <a href="https://www.youtube.com/@TheACEFamily/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@TheACEFamily/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Roman Atwood’s Comeback Vlog</h2>
-                    <img src="{{ url_for('static', filename='roman.jpg') }}" alt="Roman Atwood" class="post-image">
-                    <p>Roman Atwood’s February 28, 2025, prank vlog hit 5 million YouTube views, trending on X. Teens laugh, adults cheer—watch <a href="https://www.youtube.com/@RomanAtwood/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@RomanAtwood/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Nollywood Actress Funke Akindele’s Family Vlog Drama on YouTube</h2>
-                    <img src="{{ url_for('static', filename='fuk.jpg') }}" alt="Funke Akindele" class="post-image">
-                    <p>Funke Akindele’s March 3, 2025, YouTube vlog on feminism and family dynamics hit 2 million views, sparking X buzz. Teens find her relatable, adults analyze the shift, and older fans tie it to values—PlayButtonBuzz says it’s drama or a pivot!</p>
-                    <a href="https://www.youtube.com/@funkeakindele/videos" target="_blank" class="read-more">Read More</a>
-                </article>
+                {% for article in articles.families %}
+                    <article class="blog-post">
+                        <h2>{{ article.title }}</h2>
+                        <img src="{{ url_for('static', filename=article.image) }}" alt="{{ article.title }}" class="post-image">
+                        <p>{{ article.description }} Added on {{ article.added_time }}!</p>
+                        <a href="{{ article.link }}" target="_blank" class="read-more">Read More</a>
+                    </article>
+                {% endfor %}
             </section>
 
         {% elif request.endpoint == 'political' %}
             <section class="content-section">
                 <h1 class="section-title">YouTube Political Stars</h1>
-                <article class="blog-post">
-                    <h2>YouTube Pundits on Mayor Adams’ Case</h2>
-                    <img src="{{ url_for('static', filename='adam.jpg') }}" alt="Mayor Adams" class="post-image">
-                    <p>YouTube stars debated Mayor Eric Adams’ case from February 26, 2025, with millions of views on YouTube and X. Teens pick sides, adults analyze—watch <a href="https://www.youtube.com/results?search_query=mayor+adams+2025" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/results?search_query=mayor+adams+2025" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Bolsonaro’s YouTube Comeback</h2>
-                    <img src="{{ url_for('static', filename='bols.jpg') }}" alt="Jair Bolsonaro" class="post-image">
-                    <p>Jair Bolsonaro’s 2025 YouTube rants hit 5 million views, sparking X debate. Teens intrigued, adults skeptical—check <a href="https://www.youtube.com/@jairbolsonaro/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@jairbolsonaro/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Destiny’s Trump Rally Breakdown</h2>
-                    <img src="{{ url_for('static', filename='destiny.jpg') }}" alt="Destiny" class="post-image">
-                    <p>Destiny’s February 28, 2025, Trump rally stream hit 3 million YouTube views, trending on X. Teens love sass, adults debate—watch <a href="https://www.youtube.com/@destiny/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@destiny/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Nigerian Police Force’s YouTube Denial Sparks Political Backlash</h2>
-                    <img src="{{ url_for('static', filename='NP.jpg') }}" alt="Nigerian Police" class="post-image">
-                    <p>The Nigeria Police Force’s March 3, 2025, YouTube video denying Lugbe terrorist rumors hit 300,000 views, fueling YouTube political debates with 1 million views. Podcasters argue it hides flaws, with X buzzing—teens question transparency, adults analyze control. PlayButtonBuzz says it’s a firestorm—truth or cover-up!</p>
-                    <a href="https://www.youtube.com/@nigeriapoliceforce/videos" target="_blank" class="read-more">Read More</a>
-                </article>
+                {% for article in articles.political %}
+                    <article class="blog-post">
+                        <h2>{{ article.title }}</h2>
+                        <img src="{{ url_for('static', filename=article.image) }}" alt="{{ article.title }}" class="post-image">
+                        <p>{{ article.description }} Added on {{ article.added_time }}!</p>
+                        <a href="{{ article.link }}" target="_blank" class="read-more">Read More</a>
+                    </article>
+                {% endfor %}
             </section>
 
         {% elif request.endpoint == 'viral' %}
             <section class="content-section">
                 <h1 class="section-title">YouTube Viral Hits</h1>
-                <article class="blog-post">
-                    <h2>Solo Leveling Anime’s Latest Episode Divides YouTube Creators</h2>
-                    <img src="{{ url_for('static', filename='solo.jpg') }}" alt="Sidemen Charity Match" class="post-image">
-                    <p>The latest “Solo Leveling” episode, released on March 2, 2025, has sparked intense reactions on YouTube, with creators like anime reviewers and reaction channels dissecting its emotional reunion. The episode, with over 1,000 dislikes on Crunchyroll, has polarized fans on YouTube and X—some call it peak entertainment, others overrated and repetitive. YouTube channels are streaming live reactions, driving millions of views.<a href="https://www.youtube.com/watch?v=xwi8gLuOJdc" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/watch?v=xwi8gLuOJdc" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Kai Cenat’s Batman Bonanza</h2>
-                    <img src="{{ url_for('static', filename='kaiv.png') }}" alt="Kai Cenat and Lil Rodney as Batman on Stream" class="post-image">
-                    <p>Kai Cenat’s February 2025 Batman skit hit 10 million YouTube views, trending on X. Teens meme, adults laugh—watch <a href="https://youtube.com/shorts/jYQ3g4j1pqQ?si=4XYQDjDLzgBcctpa" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@KaiCenat/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>MrBeast’s $1M Challenge</h2>
-                    <img src="{{ url_for('static', filename='bearst.jpg') }}" alt="MrBeast" class="post-image">
-                    <p>MrBeast’s February 2025 $1M challenge hit 15 million YouTube views, sparking X buzz. Teens obsessed, adults amazed—check <a href="https://www.youtube.com/@MrBeast/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@MrBeast/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Sidemen’s Charity Match Chaos</h2>
-                    <img src="{{ url_for('static', filename='sidemen.webp') }}" alt="Sidemen Charity Match" class="post-image">
-                    <p>The Sidemen’s February 28, 2025, charity match hit 12 million YouTube views, trending on X. Teens cheer, adults love the cause—watch <a href="https://www.youtube.com/@Sidemen/videos" target="_blank">YouTube</a>!</p>
-                    <a href="https://www.youtube.com/@Sidemen/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Pastor Jerry Eze’s NSPPD YouTube Surge—Spiritual Hunger Goes Viral</h2>
-                    <img src="{{ url_for('static', filename='jerry.jpg') }}" alt="Pastor Jerry Eze" class="post-image">
-                    <p>Pastor Jerry Eze’s NSPPD ministry hit a milestone on March 3, 2025, with YouTube live prayers surpassing 10 million views in a week, trending on X as “2025’s spiritual wave.” Streams feature testimonies, but X debates faith vs. hype—teens join for energy, adults seek solace. PlayButtonBuzz calls it a phenomenon—revival or spectacle!</p>
-                    <a href="https://www.youtube.com/@pastorjerryeze/videos" target="_blank" class="read-more">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h2>Kanye West’s N*d£ YouTube Post Ignites Viral Controversy</h2>
-                    <img src="{{ url_for('static', filename='ye.jpeg') }}" alt="Kanye West" class="post-image">
-                    <p>Kanye West’s March 3, 2025, YouTube post featuring a provocative Bianca Censori image for his movie premiere hit 5 million views, trending on X as “2025’s boldest move.” Teens meme it, adults debate ethics—PlayButtonBuzz says it’s chaos or shock!</p>
-                    <a href="https://www.youtube.com/@kanyewest/videos" target="_blank" class="read-more">Read More</a>
-                </article>
+                {% for article in articles.viral %}
+                    <article class="blog-post">
+                        <h2>{{ article.title }}</h2>
+                        <img src="{{ url_for('static', filename=article.image) }}" alt="{{ article.title }}" class="post-image">
+                        <p>{{ article.description }} Added on {{ article.added_time }}!</p>
+                        <a href="{{ article.link }}" target="_blank" class="read-more">Read More</a>
+                    </article>
+                {% endfor %}
             </section>
         {% endif %}
     </main>

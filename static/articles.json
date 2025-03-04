@@ -1,0 +1,118 @@
+{
+    "home": [
+      {
+        "title": "Streamers: IShowSpeed’s Super Bowl Stunt Goes Viral",
+        "image": "superbowl_stunt.jpg",
+        "description": "IShowSpeed crashed Super Bowl LIX sidelines on February 9, 2025, trending with 10 million YouTube views and X buzz. Teens obsessed, adults stunned—watch now!",
+        "link": "https://www.youtube.com/@IShowSpeed/streams",
+        "added_time": "2025-03-03 18:00:00 PST"
+      },
+      {
+        "title": "Families: LaBrant Fam’s New Baby Drama",
+        "image": "labrant_baby.jpg",
+        "description": "LaBrant Family’s February 2025 baby vlog hit 12 million YouTube views, sparking X gossip. Teens swoon, adults debate—check it out!",
+        "link": "https://www.youtube.com/@TheLaBrantFam/videos",
+        "added_time": "2025-03-03 18:01:00 PST"
+      },
+      {
+        "title": "Political: YouTube Pundits Debate Mayor Adams’ Case",
+        "image": "adams_debate.jpg",
+        "description": "YouTube stars debated Mayor Adams’ corruption case from February 26, 2025, with millions of views and X buzz. Teens pick sides, adults analyze—watch now!",
+        "link": "https://www.youtube.com/results?search_query=mayor+adams+2025",
+        "added_time": "2025-03-03 18:02:00 PST"
+      },
+      {
+        "title": "Viral: Kai Cenat’s Batman Madness Hits 10M Views",
+        "image": "kai_batman.jpg",
+        "description": "Kai Cenat’s February 2025 Batman skit on Twitch hit 10 million YouTube views, trending on X. Teens meme, adults laugh—pure viral gold!",
+        "link": "https://youtube.com/shorts/jYQ3g4j1pqQ?si=4XYQDjDLzgBcctpa",
+        "added_time": "2025-03-03 18:03:00 PST"
+      }
+    ],
+    "streamers": [
+      {
+        "title": "IShowSpeed’s Wildest Stream Moments of 2025",
+        "image": "superbowl_stunt.jpg",
+        "description": "IShowSpeed’s Super Bowl LIX stunt on February 9, 2025, trends on YouTube with 10 million views. His streams hit 30 million subs—teens rave, adults debate. Added on 2025-03-03 18:04:00 PST!",
+        "link": "https://www.youtube.com/@IShowSpeed/streams",
+        "latest_highlights": true
+      },
+      {
+        "title": "Ninja’s 24-Hour Gaming Marathon Hits 8M Views",
+        "image": "ninja_stream.jpg",
+        "description": "Ninja’s March 3, 2025, 24-hour gaming marathon on YouTube hit 8 million views, trending on X. Teens cheer, adults debate burnout—watch now! Added on 2025-03-03 18:05:00 PST!",
+        "link": "https://www.youtube.com/@ninja/videos",
+        "latest_highlights": true
+      }
+    ],
+    "podcasters": [
+      {
+        "title": "Joe Rogan’s AI Ethics Debate on YouTube Explodes",
+        "image": "ai_podcast.jpg",
+        "description": "Joe Rogan’s March 3, 2025, podcast on AI ethics hit 3 million YouTube views, sparking X buzz. Teens intrigued, adults question implications—watch now! Added on 2025-03-03 18:06:00 PST!",
+        "link": "https://www.youtube.com/@joerogan/videos"
+      },
+      {
+        "title": "PBD Podcast’s Biden Policy Analysis Goes Viral",
+        "image": "biden_podcast.jpg",
+        "description": "PBD Podcast’s March 3, 2025, debate on Biden’s policy shift hit 2 million YouTube views, trending on X. Teens pick sides, adults analyze—check it out! Added on 2025-03-03 18:07:00 PST!",
+        "link": "https://www.youtube.com/@PBDPodcast/videos"
+      }
+    ],
+    "music": [
+      {
+        "title": "Afrobeats Explosion: Tems’ New Hit Tops YouTube Charts",
+        "image": "afrobeats_hit.jpg",
+        "description": "Tems’ March 3, 2025, Afrobeats single hit 5 million YouTube views, trending on X. Teens dance, adults stream—watch now! Added on 2025-03-03 18:08:00 PST!",
+        "link": "https://www.youtube.com/@temsbaby/videos"
+      },
+      {
+        "title": "Taylor Swift’s Surprise Drop Shocks YouTube",
+        "image": "swift_drop.jpg",
+        "description": "Taylor Swift’s March 3, 2025, surprise album drop hit 10 million YouTube views, trending on X. Teens obsess, adults praise—check it out! Added on 2025-03-03 18:09:00 PST!",
+        "link": "https://www.youtube.com/@taylorswift/videos"
+      }
+    ],
+    "families": [
+      {
+        "title": "LaBrant Fam’s Twin Announcement Shocks YouTube",
+        "image": "labrant_twins.jpg",
+        "description": "LaBrant Family’s March 3, 2025, twin announcement vlog hit 15 million YouTube views, sparking X gossip. Teens swoon, adults debate—watch now! Added on 2025-03-03 18:10:00 PST!",
+        "link": "https://www.youtube.com/@TheLaBrantFam/videos"
+      },
+      {
+        "title": "Kardashian Family Vlog Drama Hits 8M Views",
+        "image": "kardashian_drama.jpg",
+        "description": "Kardashians’ March 3, 2025, YouTube vlog on family drama hit 8 million views, trending on X. Teens swoon, adults analyze—check it out! Added on 2025-03-03 18:11:00 PST!",
+        "link": "https://www.youtube.com/@kardashians/videos"
+      }
+    ],
+    "political": [
+      {
+        "title": "YouTube Pundits Debate Mayor Adams’ Case Update",
+        "image": "adams_update.jpg",
+        "description": "YouTube stars debated Mayor Adams’ March 3, 2025, case update, hitting 3 million views and X buzz. Teens pick sides, adults analyze—watch now! Added on 2025-03-03 18:12:00 PST!",
+        "link": "https://www.youtube.com/results?search_query=mayor+adams+2025+update"
+      },
+      {
+        "title": "Bolsonaro’s YouTube Rally Speech Sparks Global Debate",
+        "image": "bolsonaro_rally.jpg",
+        "description": "Jair Bolsonaro’s March 3, 2025, YouTube rally speech hit 4 million views, trending on X. Teens intrigued, adults skeptical—check it out! Added on 2025-03-03 18:13:00 PST!",
+        "link": "https://www.youtube.com/@jairbolsonaro/videos"
+      }
+    ],
+    "viral": [
+      {
+        "title": "Kai Cenat’s Superhero Challenge Hits 12M YouTube Views",
+        "image": "kai_superhero.jpg",
+        "description": "Kai Cenat’s March 3, 2025, superhero challenge on YouTube hit 12 million views, trending on X. Teens meme, adults laugh—watch now! Added on 2025-03-03 18:14:00 PST!",
+        "link": "https://www.youtube.com/@KaiCenat/videos"
+      },
+      {
+        "title": "MrBeast’s $2M Survival Challenge Goes Viral",
+        "image": "mrbeast_survival.jpg",
+        "description": "MrBeast’s March 3, 2025, $2M survival challenge hit 20 million YouTube views, sparking X buzz. Teens obsessed, adults amazed—check it out! Added on 2025-03-03 18:15:00 PST!",
+        "link": "https://www.youtube.com/@MrBeast/videos"
+      }
+    ]
+  }
